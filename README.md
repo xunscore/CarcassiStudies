@@ -6,7 +6,7 @@ Use XunScore to encode scores from 《Carcassi Classical Guitar Method》 and �
 
 #### Instructions
 
-1. Download XunScore. (https://xunscore.github.io/CarcassiStudies)
+1. Download XunScore. (https://www.xunscore.cn)
 2. Use XunScore export zip files, place in the assets folder.
 
 #### Contribution
