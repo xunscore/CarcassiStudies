@@ -1,0 +1,81 @@
+<!--
+/**
+ * Copyright (C) 2021, by XunScore contributors (xunscore@139.com)
+ * Report bugs and download new versions at http://www.xunscore.cn/
+ *
+ * This library is distributed under the MIT License. See notice at the end
+ * of this file.
+ */
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>XunScore Player</title>
+    <link type="image/x-icon" href="css/player.ico" rel="icon" />
+    <link type="text/css" href="css/player.css" rel="stylesheet" />
+  </head>
+  <body onload="request();">  
+    <div class="interface">
+      <audio id="player"></audio>
+      <button id="play" class="button">
+        <svg viewBox="-10 -8 48 48" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l20 12-20 12z"></path></svg>
+      </button>
+      <button id="pause" class="button" style="display:none;">
+        <svg viewBox="-10 -8 48 48" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h10v24h-10zM18 4h10v24h-10z"></path></svg>
+      </button>
+      <div class="progress">
+        <div id="seekbar" class="seekbar">
+          <div id="playbar" class="playbar"></div>
+        </div>
+      </div>
+      <span id="currenttime" class="time">00:00</span>
+      <span id="duration" class="time">00:00</span>
+      <button id="zoomout" class="button">
+        <svg viewBox="-10 -8 48 48" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M8 13h16v6h-16z"></path></svg>
+      </button>    
+      <button id="zoomin" class="button">
+        <svg viewBox="-10 -8 48 48" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M8 13h16v6h-16zM13 7h6v18h-6z"></path></svg>
+      </button>
+      <button id="thumbtack" class="button">
+        <svg viewBox="-10 -8 48 48" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M17 0l-3 3 3 3-7 8h-7l5.5 5.5-8.5 11.269v1.231h1.231l11.269-8.5 5.5 5.5v-7l8-7 3 3 3-3-15-15zM14 17l-2-2 7-7 2 2-7 7z"></path></svg>
+      </button>
+      <button id="open" class="button">
+        <svg fill="white" viewBox="-10 -8 48 48" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path></svg>
+      </button>          
+    </div>
+    <input id="file" type="file" onchange="request(this.files[0]);" style="display:none;" />
+    <div id="scorepanel"></div>
+  </body>
+  <script src="js/jquery.min.js"></script>  
+  <script src="js/jquery.binarytransport.js"></script>
+  <script src="js/zipfile.js"></script>  	
+  <script src="js/player.js"></script>
+</html>
+<!--
+/**
+ * Copyright (c) 2021 by XunScore contributors
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+-->
